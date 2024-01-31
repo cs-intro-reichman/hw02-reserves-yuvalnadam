@@ -3,6 +3,28 @@
  */
 public class DamkaBoard {
 	public static void main(String[] args) {
-		//// Put your code here
+		
+		int size = Integer.parseInt(args[0]);
+
+		for (int col = 0; col < size ;col++ ) 
+		{
+
+			for (int row = 0; row < size; row++ ) {
+
+				System.out.print(" * ");
+			}
+
+			System.out.println(" ");
+
+			if(col % 2 == 0)
+			{
+
+			System.out.print(" ");
+
+			}
+
+			
+		}
+
 	}
 }

@@ -7,7 +7,7 @@ public class Reverse {
 	{
 		String str = args[0];
 		int ln = str.length() - 1;
-		char middle = str.charAt(str.length() / 2);
+		char middle = str.charAt((str.length()+1) / 2);
 
 		for (int i = ln ; i >= 0 ; i--)
 		 {

@@ -31,7 +31,7 @@ public class OneOfEachStats {
 
 		while( !girl || !boy)
 		 {
-		 	 double rand = enerator.nextDouble();
+		 	 double rand = generator.nextDouble();
 		 	if (rand == 1)
 		 	{
 		 		boy = true;

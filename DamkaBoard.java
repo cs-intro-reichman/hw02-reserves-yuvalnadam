@@ -10,19 +10,14 @@ public class DamkaBoard {
 		{
 
 			for (int row = 0; row < size; row++ ) {
-
-				System.out.print(" * ");
+				if (col % 2 == 0) {
+					System.out.print("* ");
+				} else {
+					System.out.print(" *");
+				}
 			}
 
-			System.out.println(" ");
-
-			if(col % 2 == 0)
-			{
-
-			System.out.print(" ");
-
-			}
-
+			System.out.println();
 			
 		}
 

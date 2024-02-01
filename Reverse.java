@@ -7,17 +7,15 @@ public class Reverse {
 	{
 		String str = args[0];
 		int ln = str.length() - 1;
-		char middle = str.charAt((str.length()+1) / 2);
 
 		for (int i = ln ; i >= 0 ; i--)
 		 {
 
-		 	System.out.print(str.charAt(ln)); 
-			ln -= 1;	
+		 	System.out.print(str.charAt(i)); 
 		}
 		
 		System.out.println();
-		System.out.println("The middle character is " + middle);		
+		System.out.println("The middle character is " + str.charAt(ln / 2));		
 	}
 }
 

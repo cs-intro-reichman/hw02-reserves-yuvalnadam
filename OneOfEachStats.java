@@ -29,17 +29,15 @@ public class OneOfEachStats {
 		boolean girl = false;
 		boolean boy = false;
 
-		while( !girl || !boy)
+		while(!(boy && girl))
 		 {
 		 	 double rand = generator.nextDouble();
-		 	if (rand == 1)
+		 	if (rand < 0.5)
 		 	{
 		 		boy = true;
 		 	}
-		 	if ( rand == 0)
-		 	{
+		 	else
 		 		girl = true; 		 		
-		 	}
 		 	sumforchild ++; 
 
 		}

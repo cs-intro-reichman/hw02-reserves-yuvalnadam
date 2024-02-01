@@ -44,8 +44,20 @@ public class OneOfEachStats {
         System.out.println("Number of families with 3 children: " + sum3child);
         System.out.println("Number of families with 4 or more children: " + sum4child);
 
-        int mostcommon = Math.max(Math.max(sum2child, sum3child), sum4child);
+        String common = "The most common number of children is ";
+        int max = Math.max(Math.max(sum2child, sum3child),
+                           sum4child);
+        if (max == sum2child) {
+            common = common + "2.";
+        } else {
+            if (max == sum3child) {
+                common = common + "3.";
+            } else {
+                common = common + "4 or more.";
+            }
+        }
+        System.out.println(common);
 
-        System.out.println("The most common number of children is " + mostcommon + ".");
+
     }
 }

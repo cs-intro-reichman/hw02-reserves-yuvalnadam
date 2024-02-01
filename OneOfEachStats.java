@@ -16,13 +16,13 @@ public class OneOfEachStats {
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);  
 		
-		int families = Integer.parseInt(args[0]);
+		//int families = Integer.parseInt(args[0]);
 		int sum = 0;
 		int sum2child = 0;
 		int sum3child = 0;
 		int sum4child = 0;
 
-		for (int i = 0; i < families; i++) {
+		for (int i = 0; i < T; i++) {
 
 		int sumforchild = 0; 
 
@@ -60,7 +60,7 @@ public class OneOfEachStats {
 
 		}
 
-		double avg = (double)sum / families; 
+		double avg = (double)sum / T; 
 		System.out.println("Average: " + avg + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + sum2child);
 		System.out.println("Number of families with 3 children: " + sum3child);

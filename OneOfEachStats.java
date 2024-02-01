@@ -22,14 +22,15 @@ public class OneOfEachStats {
 		int sum3child = 0;
 		int sum4child = 0;
 
-		for (int i = 0; i < T; i++) {
+		for (int i = 0; i < T; i++)
+		 {
 
 		int sumforchild = 0; 
 
 		boolean girl = false;
 		boolean boy = false;
 
-		while(!(boy && girl))
+		while(!boy || !girl)
 		 {
 		 	 double rand = generator.nextDouble();
 		 	if (rand < 0.5)
@@ -37,10 +38,14 @@ public class OneOfEachStats {
 		 		boy = true;
 		 	}
 		 	else
+		 	{
 		 		girl = true; 		 		
+		 	}
 		 	sumforchild ++; 
 
 		}
+
+		sum += sumforchild;
 
 		if (sumforchild == 2)
 		{
@@ -56,7 +61,6 @@ public class OneOfEachStats {
 			sum4child += 1; 
 		}
 
-		sum += sumforchild;
 
 		}
 

@@ -35,6 +35,9 @@ public class OneOfEachStats1 {
 
 		}
 
+		sum += sumforchild;
+
+
 		if (sumforchild == 2)
 		{
 			sum2child += 1;
@@ -49,20 +52,27 @@ public class OneOfEachStats1 {
 			sum4child += 1; 
 		}
 
-		sum += sumforchild;
-
 		}
 
-		double avg = (double)sum / families; 
-		System.out.println("Average: " + avg + " children to get at least one of each gender.");
-		System.out.println("Number of families with 2 children: " + sum2child);
-		System.out.println("Number of families with 3 children: " + sum3child);
-		System.out.println("Number of families with 4 children: " + sum4child);
+		 double avg = (double) sum / families;
+        System.out.println("Average: " + avg + " children to get at least one of each gender.");
+        System.out.println("Number of families with 2 children: " + sum2child);
+        System.out.println("Number of families with 3 children: " + sum3child);
+        System.out.println("Number of families with 4 or more children: " + sum4child);
 
-		int mostcommon = Math.max(Math.max(sum2child, sum3child), sum4child);
-		
-		System.out.println("The most common number of children is " + mostcommon + ".");
-
+        String common = "The most common number of children is ";
+        int max = Math.max(Math.max(sum2child, sum3child),
+                           sum4child);
+        if (max == sum2child) {
+            common = common + "2.";
+        } else {
+            if (max == sum3child) {
+                common = common + "3.";
+            } else {
+                common = common + "4 or more.";
+            }
+        }
+        System.out.println(common);
 
 	}	
 }
